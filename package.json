@@ -1,12 +1,13 @@
 {
-    "name": "cedrictientcheu",
+    "name": "cedric-tientcheu",
     "version": "1.0.0",
+    "private": true,
     "author": "Cedric Tientcheu",
     "license": "MIT",
     "description": "My personal portfolio site.",
-    "respository": {
+    "repository": {
         "type": "git",
-        "url": "https://github.com/cedric-91/cedrictientcheu.github.io"
+        "url": "https://github.com/cedric-91/cedrictientcheu.github.git"
     },
     "keywords": [
       "portfolio",
@@ -16,5 +17,19 @@
     ],
     "bugs": {
         "url": "https://github.com/cedric-91/cedrictientcheu.github.io/issues"
-    }
+    },
+    "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-pug": "^3.3.0",
+    "browser-sync": "^2.18.12",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-header": "^1.7.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "^1.5.1",
+    "jshint": "^2.8.0"
+  }
 }
