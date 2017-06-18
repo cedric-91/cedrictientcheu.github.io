@@ -1,0 +1,20 @@
+{
+    "name": "cedrictientcheu",
+    "version": "1.0.0",
+    "author": "Cedric Tientcheu",
+    "license": "MIT",
+    "description": "My personal portfolio site.",
+    "respository": {
+        "type": "git",
+        "url": "https://github.com/cedric-91/cedrictientcheu.github.io"
+    },
+    "keywords": [
+      "portfolio",
+      "web desinger",
+      "web developer",
+      "UX designer"
+    ],
+    "bugs": {
+        "url": "https://github.com/cedric-91/cedrictientcheu.github.io/issues"
+    }
+}
