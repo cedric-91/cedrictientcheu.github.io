@@ -1,6 +1,8 @@
 {
     "name": "cedric-tientcheu",
     "version": "1.0.0",
+    "title": "My Portfolio site",
+    "url": "",
     "private": true,
     "author": "Cedric Tientcheu",
     "license": "MIT",
