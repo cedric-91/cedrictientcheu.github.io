@@ -35,7 +35,7 @@ gulp.task("sass", function() {
 });
 
 // Add banner and make two with a .min file
-gulp.task("js",function(){
+gulp.task("js", function() {
   gulp.src("src/js/main.js")
     .pipe(jshint(".jshintrc"))
     .pipe(jshint.reporter("default"))

@@ -12,12 +12,16 @@ section.hero
         font-size: 4.0em
         text-align: center
         padding-top: 40px
-        margin: 0
+        transform: scale(0)
+        transition: transform 0.4s ease-in
         font-family: $heading-font
         font-weight: 700
     .sub-content
       font-size: 1.4em
       text-align: center
+      margin-top: -20px
+      opacity: 0
+      transition: opacity 0.4s ease-in 1s
     .btn
       text-decoration: none
       background-color: $light-yellow
@@ -30,22 +34,4 @@ section.hero
       transition: all 0.4s ease-in
       &:hover
         box-shadow: -2px 0px 10px 0px rgba($black, 0.6)
-    .laptop-cont
-      width: auto
-      height: auto
-      min-width: 843px
-      min-height: 442px
-      margin-top: 20px
-      background: url('../img/laptop.png') 0 0 no-repeat
-      background-size: cover
-      position: relative
-      .slide-cont
-        display: none
-        position: absolute
-        list-style: none
-        top: 11%
-        left: 18%
-        width: 574px
-        height: 358px
-        margin: 0
-        background: $white
+    .monitor-cont
