@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Cedric Portfolio</title>
+    <title>Cedric tIENTCHEU | Portfolio</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="My very own portfolio displaying some of my cool work">
@@ -18,7 +18,7 @@
     <link href="assets/css/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/plugins/normalize.css">
 
-    <script src="assets/components/modernizr/modernizr.js"></script>
+    <!-- <script src="assets/components/modernizr/modernizr.js"></script> -->
   </head>
   <body>
 
@@ -27,17 +27,17 @@
       <div class="col-9">
         <div class="logo">
           <a href="/">
-            <img src="assets/img/logo.png" alt="Logo">
+            <img src="assets/img/logo.png" alt="Logo" id="logo-img">
           </a>
         </div>
         <!-- // Navigation Section -->
         <nav class="nav" role="navigation">
           <ul class="nav-menu">
             <li><a href="/">Home</a></li>
-            <li><a href="#">Biography</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
@@ -55,7 +55,7 @@
         <div class="col-9">
               <h1 class="main-header">Designer. Developer. UX - UI</h1>
               <p class="sub-content">Hello there! I design and Develop reponsive websites :D</p>
-              <a href="#" class="btn">View Portfolio</a>
+              <a href="#portfolio" class="btn">View Portfolio</a>
               <div class="monitor-cont">
                 <!-- // Laptop Container Section -->
                 <div class="laptop-cont">
@@ -67,12 +67,37 @@
 
                   </div>
                 </div>
+                <!-- // Tablet Container Section -->
+                <div class="tablet-cont">
+                  <div class="tablet-screen"></div>
+                </div>
               </div>
         </div>
     </section>
 
-    <main class="main" role="main">
+    <!-- // Biography Container Section -->
+    <main class="main" role="main" id="biography">
+          <div class="col-9">
+                <h1 class="second-header">Biography</h1>
+                <div class="avator"></div>
+                <p class="author">Cedric Tientcheu</p>
+                <p id="social-links">Follow me on: <a href="https://www.linkedin.com/in/cedrictientcheu" target="_blank" class="socials"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="https://www.github.com/cedric-91" target="_blank" class="socials"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </p>
+                <p class="bio-info">
+                    Graduated from London South Bank University with a 2:2 score.
+                    Manage to obtain an intern at <a href="http://www.datalog.co.uk" class="bold-links" target="_blank"><span class="bold">Market FootPrint</span></a>
+                    after my graduation for a perioud of 3 months (which was later extended for another 3 months due to great performances).
+                    Had the priviledge to work with some of the great companies in all sectors like
+                    ( <a href="http://www.trinitymirror.com" class="bold-links" target="_blank"><span class="bold">Trinity Mirror</span></a> /
+                      <a href="http://www.manchestereveningnews.co.uk/news" class="bold-links" target="_blank"><span class="bold">M.E.N media news</span></a>,
+                     <a href="http://www.cruise.co.uk" target="_blank" class="bold-links"><span class="bold">Cruise.co.uk</span></a> )
+                </p>
 
+                <p class="bio-info">
+                    Strongly passionate about Front End Development as you will see down below on skills attribute 
+                </p>
+          </div>
     </main>
 
     <aside class="sidebar" role="complementary">

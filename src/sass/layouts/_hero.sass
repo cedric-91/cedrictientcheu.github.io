@@ -35,3 +35,37 @@ section.hero
       &:hover
         box-shadow: -2px 0px 10px 0px rgba($black, 0.6)
     .monitor-cont
+      width: 100%
+      height: auto
+      margin-top: 20px
+      transform: translateY(25%)
+      opacity: 0
+      transition: all 800ms ease-in 1.5s
+      min-height: 500px
+      //max-height: 600px
+      position: relative
+      //background: pink
+      .laptop-cont
+        //width: 843px
+        width: 70%
+        height: 442px
+        margin: 0 auto
+        background: url('../img/laptop.png') 0 0 no-repeat
+        background-size: contain
+        position: relative
+      .mobile-cont
+        position: relative
+        width: 155px
+        height: 310px
+        margin-top: -270px
+        left: 15%
+        background: url('../img/i-phone.png') 0 0 no-repeat
+        background-size: contain
+      .tablet-cont
+        position: absolute
+        width: 255px
+        height: 315px
+        background: url('../img/i-pad.png') 0 0 no-repeat
+        background-size: cover
+        top: 32%
+        right: 15%
