@@ -1,9 +1,10 @@
 section.hero
-  background-color: $yellow
-  height: 600px
-  min-height: 400px
+  height: auto
+  min-height: 700px
   width: 100%
+  background-color: $yellow
   .col-9
+    position: relative
     height: 100%
     display: flex
     flex-direction: column
@@ -33,39 +34,45 @@ section.hero
       box-sizing: border-box
       transition: all 0.4s ease-in
       &:hover
-        box-shadow: -2px 0px 10px 0px rgba($black, 0.6)
+        box-shadow: 0 2px 8px 0 rgba($black, 0.6)
     .monitor-cont
       width: 100%
-      height: auto
-      margin-top: 20px
-      transform: translateY(25%)
+      height: 470px
       opacity: 0
       transition: all 800ms ease-in 1.5s
-      min-height: 500px
-      //max-height: 600px
-      position: relative
+      position: absolute
+      top: 100%
+      margin-top: 60px
+      display: none
       //background: pink
-      .laptop-cont
-        //width: 843px
+      .monitor-inner
         width: 70%
-        height: 442px
+        height: 100%
+        background: red
         margin: 0 auto
-        background: url('../img/laptop.png') 0 0 no-repeat
-        background-size: contain
         position: relative
-      .mobile-cont
-        position: relative
-        width: 155px
-        height: 310px
-        margin-top: -270px
-        left: 15%
-        background: url('../img/i-phone.png') 0 0 no-repeat
-        background-size: contain
-      .tablet-cont
-        position: absolute
-        width: 255px
-        height: 315px
-        background: url('../img/i-pad.png') 0 0 no-repeat
-        background-size: cover
-        top: 32%
-        right: 15%
+        .laptop-cont
+          width: auto
+          min-width: 100%
+          max-width: 100%
+          height: 442px
+          margin: 0 auto
+          background: url('../img/laptop.png') 0 0 no-repeat
+          background-size: contain
+          position: relative
+        .mobile-cont
+          position: relative
+          width: 155px
+          height: 310px
+          margin-top: -270px
+          left: 0
+          background: url('../img/i-phone.png') 0 0 no-repeat
+          background-size: contain
+        .tablet-cont
+          position: absolute
+          width: 255px
+          height: 315px
+          background: url('../img/i-pad.png') 0 0 no-repeat
+          background-size: cover
+          top: 32%
+          right: 0

@@ -47,7 +47,8 @@
                             navigationMenu = $('.nav');
 
                       function displayMenu() {
-                          navigationMenu.slideDown(500);
+                          $(this).toggleClass('is-active');
+                          navigationMenu.toggleClass('slide-up-down');
                       }
 
                       menuIcon.on('click', displayMenu);

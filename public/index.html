@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Cedric tIENTCHEU | Portfolio</title>
+    <title>Cedric Tientcheu | Portfolio</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="My very own portfolio displaying some of my cool work">
@@ -26,10 +26,18 @@
     <header class="header" role="banner">
       <div class="col-9">
         <div class="logo">
-          <a href="/">
-            <img src="assets/img/logo.png" alt="Logo" id="logo-img">
+          <a href="/" class="logo-link">
+            <img src="assets/img/logo.png" alt="Logo" class="logo-img">
           </a>
         </div>
+
+        <!-- // Responsive Logo -->
+        <div class="res-logo">
+          <a href="/" class="logo-link">
+            <img src="assets/img/small-logo.png" alt="Logo" class="logo-img">
+          </a>
+        </div>
+
         <!-- // Navigation Section -->
         <nav class="nav" role="navigation">
           <ul class="nav-menu">
@@ -57,28 +65,28 @@
               <p class="sub-content">Hello there! I design and Develop reponsive websites :D</p>
               <a href="#portfolio" class="btn">View Portfolio</a>
               <div class="monitor-cont">
-                <!-- // Laptop Container Section -->
-                <div class="laptop-cont">
-                    <div class="laptop-screen"></div>
-                </div>
-                <!-- // Mobile Container Section -->
-                <div class="mobile-cont">
-                  <div class="mobile-screen">
-
-                  </div>
-                </div>
-                <!-- // Tablet Container Section -->
-                <div class="tablet-cont">
-                  <div class="tablet-screen"></div>
-                </div>
+                    <div class="monitor-inner">
+                        <!-- // Laptop Container Section -->
+                        <div class="laptop-cont">
+                            <div class="laptop-screen"></div>
+                        </div>
+                        <!-- // Mobile Container Section -->
+                        <div class="mobile-cont">
+                          <div class="mobile-screen"></div>
+                        </div>
+                        <!-- // Tablet Container Section -->
+                        <div class="tablet-cont">
+                          <div class="tablet-screen"></div>
+                        </div>
+                    </div>
               </div>
         </div>
     </section>
 
     <!-- // Biography Container Section -->
-    <main class="main" role="main" id="biography">
+    <main class="main" role="main">
           <div class="col-9">
-                <h1 class="second-header">Biography</h1>
+                <h1 class="second-header" id="biography">Biography</h1>
                 <div class="avator"></div>
                 <p class="author">Cedric Tientcheu</p>
                 <p id="social-links">Follow me on: <a href="https://www.linkedin.com/in/cedrictientcheu" target="_blank" class="socials"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
@@ -95,17 +103,71 @@
                 </p>
 
                 <p class="bio-info">
-                    Strongly passionate about Front End Development as you will see down below on skills attribute 
+                    Strongly passionate about Front End Development as you will see down below on skills attribute
                 </p>
           </div>
     </main>
 
-    <aside class="sidebar" role="complementary">
+    <!-- // Portfolio Section -->
+    <section class="portfolio-cont" id="portfolio">
+        <div class="col-9">
+            <h1 class="second-header">Portfolio</h1>
+            <div class="box-wrapper">
+              <div class="box-outter">
+                <div class="box-inner">
+                    <div class="box">
+                        <div class="box-content">
+                              <h2>Audify</h2>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-content">
+                          <h2>Audify</h2>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-content">
+                            <h2>Audify</h2>
+                        </div>
+                    </div>
+                    <div class="box">
+                          <div class="box-content">
+                              <h2>Audify</h2>
+                          </div>
+                    </div>
+                    <div class="box">
+                          <div class="box-content">
+                              <h2>Audify</h2>
+                          </div>
+                    </div>
+                    <div class="box">
+                          <div class="box-content">
+                              <h2>Audify</h2>
+                          </div>
+                    </div>
+                    <div class="box">
+                          <div class="box-content">
+                              <h2>Audify</h2>
+                          </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
 
-    </aside>
+    <!-- // Skills Set Section -->
+    <section class="skills-cont" id="skills">
+      <div class="col-9">
+          <h1 class="second-header">Skills</h1>
+      </div>
+    </section>
 
+    <!-- // Footer Section -->
     <footer class="footer" role="contentinfo">
-
+          <a href="mailto:cedrictientcheu123@gmail.com" class="email">cedrictientcheu123@gmail.com</a>
+          <p class="copy-right">2017 Copyright</p>
+          <p id="social-links-cont">Follow me on: </p>
     </footer>
 
     <script src="assets/plugins/jquery/jquery.min.js"></script>

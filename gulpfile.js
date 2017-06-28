@@ -34,9 +34,9 @@ gulp.task("sass", function() {
       .pipe(browserSync.reload({ stream: true }));
 });
 
-// Add banner and make two with a .min file
+// Add banner, Compress the file and make two with a .min file
 gulp.task("js", function() {
-  gulp.src("src/js/main.js")
+    return gulp.src("src/js/main.js")
     .pipe(jshint(".jshintrc"))
     .pipe(jshint.reporter("default"))
     .pipe(header(banner, { package : package }))
@@ -48,6 +48,7 @@ gulp.task("js", function() {
     .pipe(browserSync.reload({stream:true, once: true}));
 });
 
+// Looks for the index file in baseDir and launch the site into a browser
 gulp.task("browser-sync", function() {
       browserSync.init(null, {
           server: {
@@ -56,6 +57,7 @@ gulp.task("browser-sync", function() {
       });
 });
 
+// Reload the page for each time it has been saved.
 gulp.task("bs-reload", function() {
       browserSync.reload();
 });

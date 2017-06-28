@@ -1,2 +1,2 @@
-# cedrictientcheu.github.io
+# Cedric Tientcheu
 My Portfolio website
