@@ -44,13 +44,37 @@
                       }
 
                       menuIcon.on('click', displayMenu);
-                  }
+                  },
+                  animateSkills: function() {
+                    var htmlBar = $('.html'),
+                          cssBar = $('.css'),
+                          status = $('.content-score'),
+                          width = 1,
+                          value = [78,  75, 45, 50  ],
+                          id = setInterval(frame, 30);
 
+                    for (var i = 0; i < value.length -1; i++) {
+                            var position = value[i];
+                            console.log(position);
+                    }
+                    function frame() {
+                        if ( width >= position) {
+                              clearInterval(id);
+                        }   else {
+                            width++;
+                            htmlBar.css('width', width + '%');
+                            cssBar.css('width', width + '%');
+                            status.html(width * 1 + '%');
+                        }
+                    }
+
+                  }
 
               };
 
             app.resizeWindow();
             app.displayMenuOnResp();
+            app.animateSkills();
         });
 
 })(jQuery, window, document);
