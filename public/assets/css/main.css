@@ -191,6 +191,15 @@ h1, h2, h3, h4, h5, h6, p {
     .text-align-right {
       text-align: left; } }
 
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+  @media only screen and (max-width: 980px) {
+    .float-right {
+      float: none; } }
+
 header {
   height: 100px;
   width: 100%;
@@ -375,7 +384,11 @@ main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-in 0s;
+    -o-transition: opacity 0.4s ease-in 0s;
+    transition: opacity 0.4s ease-in 0s; }
     main .col-9 .avator {
       width: 200px;
       height: 200px;
@@ -417,13 +430,22 @@ main {
   color: #151515; }
   .portfolio-cont .col-9 {
     padding: 0.8em;
-    height: 100%; }
+    height: 100%;
+    overflow: hidden; }
     .portfolio-cont .col-9 .second-header {
       margin: 0; }
     .portfolio-cont .col-9 .box-wrapper {
       width: 100%;
       height: 400px;
-      margin-top: 20px; }
+      margin-top: 20px;
+      -webkit-transform: translateX(105%);
+          -ms-transform: translateX(105%);
+              transform: translateX(105%);
+      -webkit-transition: -webkit-transform 600ms ease-in 0s;
+      transition: -webkit-transform 600ms ease-in 0s;
+      -o-transition: transform 600ms ease-in 0s;
+      transition: transform 600ms ease-in 0s;
+      transition: transform 600ms ease-in 0s, -webkit-transform 600ms ease-in 0s; }
       .portfolio-cont .col-9 .box-wrapper .box-outter {
         width: 100%;
         height: 100%;
@@ -532,7 +554,8 @@ main {
                   flex-direction: column; } }
       .skills-cont .col-9 .row .column {
         -ms-flex-preferred-size: 45%;
-            flex-basis: 45%; }
+            flex-basis: 45%;
+        overflow: hidden; }
         .skills-cont .col-9 .row .column .small-header {
           font-size: 1.5em;
           border-bottom: 1px solid rgba(21, 21, 21, 0.25); }
@@ -540,7 +563,11 @@ main {
           width: 100%;
           height: auto;
           margin: 20px 0;
-          position: relative; }
+          position: relative;
+          left: -100%;
+          -webkit-transition: left 500ms ease-in 0s;
+          -o-transition: left 500ms ease-in 0s;
+          transition: left 500ms ease-in 0s; }
           .skills-cont .col-9 .row .column .content::before, .skills-cont .col-9 .row .column .content::after {
             content: '';
             display: table; }
@@ -548,22 +575,51 @@ main {
             clear: both; }
           .skills-cont .col-9 .row .column .content .content-title {
             font-weight: bold; }
-          .skills-cont .col-9 .row .column .content .progress-bar {
+          .skills-cont .col-9 .row .column .content .progress-cont {
             width: 250px;
             height: 20px;
             background-color: #fcffc9;
             border-radius: 0.3em;
             -webkit-box-shadow: inset 0 2px 10px 0 rgba(21, 21, 21, 0.2);
-                    box-shadow: inset 0 2px 10px 0 rgba(21, 21, 21, 0.2);
-            float: left; }
-            @media only screen and (max-width: 980px) {
-              .skills-cont .col-9 .row .column .content .progress-bar {
-                width: 165px; } }
-            .skills-cont .col-9 .row .column .content .progress-bar .progress {
+                    box-shadow: inset 0 2px 10px 0 rgba(21, 21, 21, 0.2); }
+            @media only screen and (max-width: 980px) and (min-width: 860px) {
+              .skills-cont .col-9 .row .column .content .progress-cont {
+                width: 92%;
+                float: left;
+                -webkit-transition: width 0.4s;
+                -o-transition: width 0.4s;
+                transition: width 0.4s; } }
+            @media only screen and (max-width: 859px) {
+              .skills-cont .col-9 .row .column .content .progress-cont {
+                width: 80%;
+                float: left;
+                -webkit-transition: width 0.4s;
+                -o-transition: width 0.4s;
+                transition: width 0.4s; } }
+            .skills-cont .col-9 .row .column .content .progress-cont .bar {
               height: inherit;
-              width: 1%;
               border-radius: 0.3em;
               background-color: #faf885; }
-          .skills-cont .col-9 .row .column .content .content-score {
+            .skills-cont .col-9 .row .column .content .progress-cont .html-bar {
+              width: 78%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .css-bar {
+              width: 75%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .script-bar {
+              width: 50%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .design-bar {
+              width: 75%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .photoshop-bar {
+              width: 25%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .gulp-bar {
+              width: 40%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .git-bar {
+              width: 35%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .php-bar {
+              width: 40%; }
+            .skills-cont .col-9 .row .column .content .progress-cont .sql-bar {
+              width: 60%; }
+          .skills-cont .col-9 .row .column .content .status {
             margin: 0 0.6em;
             font-size: 1.2em; }
+      .skills-cont .col-9 .row .right-column .progress-holder {
+        float: right; }

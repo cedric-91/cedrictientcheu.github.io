@@ -6,8 +6,8 @@
             // Hero Elements stored into a variable.
               var mainHeader = $('.main-header'),
                     subContent = $('.sub-content'),
-                    btnLink = $('.btn'),
-                    laptopCont = $('.laptop-cont'),
+                    //btnLink = $('.btn'),
+                    //laptopCont = $('.laptop-cont'),
                     monitorCont = $('.monitor-cont');
 
               mainHeader.css({
@@ -34,6 +34,7 @@
                             img.attr('src', 'assets/img/small-logo.png');
                       }
                   },
+                  // Display Menu on Mobile view
                   displayMenuOnResp: function() {
                       var menuIcon = $('.menu-cont'),
                             navigationMenu = $('.nav');
@@ -45,36 +46,54 @@
 
                       menuIcon.on('click', displayMenu);
                   },
-                  animateSkills: function() {
-                    var htmlBar = $('.html'),
-                          cssBar = $('.css'),
-                          status = $('.content-score'),
-                          width = 1,
-                          value = [78,  75, 45, 50  ],
-                          id = setInterval(frame, 30);
+                  smoothNavigationScroll: function() {
+                      var bio = $('.main'),
+                            mainContent = bio.find('.col-9'),
+                            portfolio = $('.portfolio-cont'),
+                            skills = $('.skills-cont');
+                      // Biography Section
+                      bio.waypoint(function(direction) {
+                          if ( direction === 'down' ) {
+                                mainContent.css('opacity', 1);
+                          }
+                      }, {
+                        offset: '20%'
+                      });
+                      // Portfolio Section
+                      portfolio.waypoint(function(direction) {
+                          var boxWrapper = portfolio.find('.box-wrapper');
+                          if ( direction === 'down' ) {
+                                boxWrapper.css({
+                                    'transform' : 'translateX(0)'
+                                });
+                          }
+                      }, {
+                          offset: '35%'
+                      });
 
-                    for (var i = 0; i < value.length -1; i++) {
-                            var position = value[i];
-                            console.log(position);
-                    }
-                    function frame() {
-                        if ( width >= position) {
-                              clearInterval(id);
-                        }   else {
-                            width++;
-                            htmlBar.css('width', width + '%');
-                            cssBar.css('width', width + '%');
-                            status.html(width * 1 + '%');
-                        }
-                    }
+                      // Skills Section
+                      skills.waypoint(function(direction) {
+                          var column = skills.find('.column'),
+                                content = column.find('.content');
 
+                          if ( direction === 'down' ) {
+                                for ( var i = 0; i <= content.length; i++ ) {
+                                          //var position = content[ i],
+                                                //bar = $(position);
+                                          
+                                }
+
+                          }
+                      }, {
+                          offset: '50%'
+                      });
                   }
-
               };
 
             app.resizeWindow();
             app.displayMenuOnResp();
-            app.animateSkills();
+            app.smoothNavigationScroll();
+            //app.animateSkills();
         });
 
 })(jQuery, window, document);

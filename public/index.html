@@ -84,9 +84,9 @@
     </section>
 
     <!-- // Biography Container Section -->
-    <main class="main" role="main">
+    <main class="main" role="main" id="biography">
           <div class="col-9">
-                <h1 class="second-header" id="biography">Biography</h1>
+                <h1 class="second-header biography" >Biography</h1>
                 <div class="avator"></div>
                 <p class="author">Cedric Tientcheu</p>
                 <p id="social-links">Follow me on: <a href="https://www.linkedin.com/in/cedrictientcheu" target="_blank" class="socials"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
@@ -168,53 +168,86 @@
                         <!-- // HTML5 -->
                         <div class="content">
                           <p class="content-title">HTML5 / Jade</p>
-                          <div class="progress-bar">
-                            <div class="progress html"></div>
+                          <div class="progress-cont float-left">
+                            <div class="bar html-bar"></div>
                           </div>
-                          <span class="content-score"></span>
+                          <span class="status html-status">78%</span>
                         </div>
                         <!-- // CSS3 -->
                         <div class="content">
                           <p class="content-title">CSS3 / SASS</p>
-                          <div class="progress-bar">
-                            <div class="progress css"></div>
+                          <div class="progress-cont float-left">
+                            <div class="bar css-bar"></div>
                           </div>
-                          <span class="content-score">75%</span>
+                          <span class="status css-status">75%</span>
                         </div>
                         <!-- // JavaScript -->
                         <div class="content">
                           <p class="content-title">JavaScript / jQuery</p>
-                          <div class="progress-bar">
-                            <div class="progress" id="java-script"></div>
+                          <div class="progress-cont float-left">
+                            <div class="bar script-bar" id="java-script"></div>
                           </div>
-                          <span class="content-score">50%</span>
+                          <span class="status script-status">50%</span>
                         </div>
                         <!-- // Responsive -->
                         <div class="content">
                           <p class="content-title">Responsive Design</p>
-                          <div class="progress-bar">
-                            <div class="progress" id="design"></div>
+                          <div class="progress-cont float-left">
+                            <div class="bar design-bar" id="design"></div>
                           </div>
-                          <span class="content-score">80%</span>
+                          <span class="status design-status">75%</span>
                         </div>
                         <!-- // PhotoShop -->
                         <div class="content">
                           <p class="content-title">PhotoShop</p>
-                          <div class="progress-bar">
-                            <div class="progress" id="photoshop"></div>
+                          <div class="progress-cont float-left">
+                            <div class="bar photoshop-bar"></div>
                           </div>
-                          <span class="content-score">25%</span>
+                          <span class="status photoshop-status">25%</span>
+                        </div>
+                        <!-- // Gulp -->
+                        <div class="content">
+                          <p class="content-title">Gulp</p>
+                          <div class="progress-cont float-left">
+                            <div class="bar gulp-bar"></div>
+                          </div>
+                          <span class="status gulp-status">40%</span>
+                        </div>
+                        <!-- // Git -->
+                        <div class="content">
+                          <p class="content-title">Git</p>
+                          <div class="progress-cont float-left">
+                            <div class="bar git-bar"></div>
+                          </div>
+                          <span class="status git-status">35%</span>
                         </div>
                 </div>
-                <div class="column text-align-right">
+                <!-- // Right Column Section -->
+                <div class="column text-align-right right-column">
                     <h3 class="small-header">Back End</h3>
+                    <!-- // PHP -->
+                    <div class="content">
+                      <p class="content-title">PHP</p>
+                      <div class="progress-cont float-right">
+                        <div class="bar php-bar float-right"></div>
+                      </div>
+                      <span class="status php-status">40%</span>
+                    </div>
+                    <!-- // MySQL -->
+                    <div class="content">
+                      <p class="content-title">SQL</p>
+                      <div class="progress-cont float-right">
+                        <div class="bar sql-bar float-right"></div>
+                      </div>
+                      <span class="status sql-status">60%</span>
+                    </div>
                   </div>
               </div>
       </div>
     </section>
 
     <!-- // Footer Section -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer" role="contentinfo" id="contact">
           <div class="col-9">
             <a href="mailto:cedrictientcheu123@gmail.com" class="email">cedrictientcheu123@gmail.com</a>
             <p class="copy-right">&copy;2017 Copyright</p>
@@ -225,6 +258,7 @@
     </footer>
 
     <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/jquery.waypoints.min.js"></script>
     <script src="assets/js/main.min.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
