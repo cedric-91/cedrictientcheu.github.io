@@ -437,15 +437,7 @@ main {
     .portfolio-cont .col-9 .box-wrapper {
       width: 100%;
       height: 400px;
-      margin-top: 20px;
-      -webkit-transform: translateX(105%);
-          -ms-transform: translateX(105%);
-              transform: translateX(105%);
-      -webkit-transition: -webkit-transform 600ms ease-in 0s;
-      transition: -webkit-transform 600ms ease-in 0s;
-      -o-transition: transform 600ms ease-in 0s;
-      transition: transform 600ms ease-in 0s;
-      transition: transform 600ms ease-in 0s, -webkit-transform 600ms ease-in 0s; }
+      margin-top: 20px; }
       .portfolio-cont .col-9 .box-wrapper .box-outter {
         width: 100%;
         height: 100%;
@@ -467,6 +459,10 @@ main {
                 flex-basis: 13.5%;
             height: 100%;
             position: relative;
+            left: 100%;
+            -webkit-transition: left 0.4s cubic-bezier(0.28, 0.51, 0.43, 1.17) 1.5s;
+            -o-transition: left 0.4s cubic-bezier(0.28, 0.51, 0.43, 1.17) 1.5s;
+            transition: left 0.4s cubic-bezier(0.28, 0.51, 0.43, 1.17) 1.5s;
             cursor: pointer;
             -webkit-box-shadow: 2px 0 8px 0 rgba(21, 21, 21, 0.6);
                     box-shadow: 2px 0 8px 0 rgba(21, 21, 21, 0.6);
@@ -563,11 +559,7 @@ main {
           width: 100%;
           height: auto;
           margin: 20px 0;
-          position: relative;
-          left: -100%;
-          -webkit-transition: left 500ms ease-in 0s;
-          -o-transition: left 500ms ease-in 0s;
-          transition: left 500ms ease-in 0s; }
+          position: relative; }
           .skills-cont .col-9 .row .column .content::before, .skills-cont .col-9 .row .column .content::after {
             content: '';
             display: table; }
@@ -599,25 +591,11 @@ main {
             .skills-cont .col-9 .row .column .content .progress-cont .bar {
               height: inherit;
               border-radius: 0.3em;
-              background-color: #faf885; }
-            .skills-cont .col-9 .row .column .content .progress-cont .html-bar {
-              width: 78%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .css-bar {
-              width: 75%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .script-bar {
-              width: 50%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .design-bar {
-              width: 75%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .photoshop-bar {
-              width: 25%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .gulp-bar {
-              width: 40%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .git-bar {
-              width: 35%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .php-bar {
-              width: 40%; }
-            .skills-cont .col-9 .row .column .content .progress-cont .sql-bar {
-              width: 60%; }
+              background-color: #faf885;
+              width: 1%;
+              -webkit-transition: width 800ms ease-in 0s;
+              -o-transition: width 800ms ease-in 0s;
+              transition: width 800ms ease-in 0s; }
           .skills-cont .col-9 .row .column .content .status {
             margin: 0 0.6em;
             font-size: 1.2em; }

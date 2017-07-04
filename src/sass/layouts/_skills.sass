@@ -26,8 +26,6 @@
           height: auto
           margin: 20px 0
           position: relative
-          left: -100%
-          transition: left 500ms ease-in 0s
           &::before, &::after
             content: ''
             display: table
@@ -53,26 +51,8 @@
               height: inherit
               border-radius: 0.3em
               background-color: $yellow
-              //@media only screen and (max-width: 980px)
-                  width: 100px
-            .html-bar
-              width: 78%
-            .css-bar
-              width: 75%
-            .script-bar
-              width: 50%
-            .design-bar
-              width: 75%
-            .photoshop-bar
-              width: 25%
-            .gulp-bar
-              width: 40%
-            .git-bar
-              width: 35%
-            .php-bar
-              width: 40%
-            .sql-bar
-              width: 60%
+              width: 1%
+              transition: width 800ms ease-in 0s
           .status
             margin: 0 0.6em
             font-size: 1.2em
