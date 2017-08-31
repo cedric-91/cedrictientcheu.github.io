@@ -8,7 +8,8 @@
               var mainHeader = $('.main-header'),
                     subContent = $('.sub-content'),
                     count = 0,
-                    monitorCont = $('.monitor-cont');
+                    monitorCont = $('.monitor-cont'),
+                    slideWindowContainer = $('.slide-window-container');
 
               mainHeader.css({
                     'transform' : 'scale(1)'
@@ -20,25 +21,106 @@
                       'transform' : 'translateY(0)',
                       'opacity' : 1
                   });
+                  slideWindowContainer.css({
+                    'transform' : 'translateY(0)',
+                    'opacity' : 1
+                  });
               };
 
               fadeInContent();
+
+              var links = $('a[href^="#"]');
+              // Smooth navigation scroll
+              function smoothNavigationScroll(e) {
+                    var target, $target, body = $('html, body'), speed = 900;
+                    e.preventDefault();
+
+                    target = $(this).hash;
+                    $target = $(target);
+                    body.stop().animate({
+                        'scrollTop': $target.offset().top
+                    }, speed, 'swing');
+              }
+
+              /* function animationComplete() {
+                var target = $(this).hash;
+                window.location.hash = target;
+              } */
+
+              links.on('click', smoothNavigationScroll);
+
+              // Slideshow Section
+              function slideshow () {
+                  var slideWindowContainer = $('.slide-window-container'),
+                        windowBody = slideWindowContainer.find('.window-body'),
+                        windowImg = windowBody.find('.window-img'),
+                        path = 'assets/',
+                        count = 0,
+                        speed = 5000,
+                        //img = windowImg.find('img');
+                        img = [
+                          path + 'img/photo-gallery.jpg',
+                          path + 'img/audify-landing-page.jpg',
+                          path + 'img/golf-day-layout.jpg'
+                        ],
+                        imgLength = img.length;
+
+                         windowImg.css({
+                            'background' : 'url(' + img[ count ] + ') 0 0 no-repeat',
+                            'background-size' : 'cover'
+                        });
+
+                         //windowImg.fadeOut(200);
+
+                         var start = setInterval(function () {
+
+                             count++;
+
+                             windowImg.fadeOut(500);
+
+                             /*windowImg.css({
+                                 'background': 'url(' + img[count] + ') 0 0 no-repeat',
+                                 'background-size': 'cover'
+                             });*/
+
+                             windowImg.fadeIn(200);
+
+                             if (count === imgLength) {
+                                 count = 0;
+                                 clearInterval(start);
+                             }
+
+                             console.log('img: ' + count);
+                        }, speed);
+
+
+              }
+              slideshow();
 
               // Run these functions only when an event is called.
               var app = {
                   // Display Menu on Mobile view
                   displayMenuOnResp: function() {
                       var menuIcon = $('.menu-cont'),
-                            navigationMenu = $('.nav');
+                            navigationMenu = $('.nav'),
+                            links = navigationMenu.find('ul > li > a');
 
                       function displayMenu() {
                           $(this).toggleClass('is-active');
                           navigationMenu.toggleClass('slide-up-down');
+                          navigationMenu.css('z-index', 1);
                       }
+
+                      function hideMenu() {
+                          navigationMenu.removeClass('slide-up-down');
+                          menuIcon.removeClass('is-active');
+                      }
+
                       menuIcon.on('click', displayMenu);
+                      links.on('click', hideMenu);
                   },
                   // Fire these functions on Scroll events
-                  smoothNavigationScroll: function() {
+                  displayContentOnScroll: function() {
                       var bio = $('.main'),
                             mainContent = bio.find('.col-9'),
                             portfolio = $('.portfolio-cont'),
@@ -59,10 +141,11 @@
                                       box = boxWrapper.find('.box'),
                                       speed = 300,
                                       delaySpeed = 1.5;
-                                box.first().css('left', 0);
+                                //box.first().css('left', 0);
                                 function runFrame() {
+                                    $(box[count]).css('left', 0);
                                     count++;
-                                    if ( count <= box.length ) {
+                                    if ( count < box.length -1) {
                                           var index = box[ count ],
                                                 val = $(index).delay(delaySpeed);
                                           val.css('left', 0);
@@ -106,44 +189,50 @@
                               * (4). Increase the width by the given value
                               * -- Update The Status --
                               * (1). Loop through each status elements
-                              * (2). Assign the width to that corresponding status
+                              * (2). Assign the value width to that current status
                               */
                               var position, barIndex, indexVal;
-
+                              var array = [ ];
                               // Get the value for each bar elements
                               for (var i = 0; i < bar.length; i++) {
                                        position = bar[ i ];
                                        barIndex = $(position);
                                       indexVal = barIndex.data('value');
-                                     //console.log(statusPos);
                                      width++;
-                                     for (var x = 0; x < status.length; x++) {
-                                              var statusPos = status[ x ];
-                                              var statusIndex = $(statusPos);
-                                              statusIndex.html(indexVal * 1 + '%');
-                                              //console.log(statusPos);
-                                     }
-                                     // Check if the width is less than the given value
-                                     if (width < indexVal) {
-                                            //console.log(indexVal);
+                                     // Check if the width is less/greater than the given value
+                                     if (width <= indexVal || width >= indexVal) {
                                            barIndex.css('width', indexVal + '%');
                                      } else {
                                           return false;
                                      }
+                                     array.push(indexVal);
                               }
-                              console.log(position + statusPos);
+
+                              function updateStatus() {
+                                    var x, statusPos, statusIndex;
+                                    for (x = 0; x <= status.length; x++) {
+                                            statusPos = status[ x ];
+                                            statusIndex = $(statusPos);
+                                            var g = parseInt(statusPos);
+                                            //console.log(statusPos);
+                                            if (g === 0) {
+                                                  statusIndex.html(indexVal *1 + '%');
+                                            }
+                                    }
+                              }
+                              updateStatus();
+                              //console.log('Print :' + array[2]);
 
                           }, {
                             offset: '40%'
                           });
                       }
-
                       navigateScroll(); // Fire the navigateScroll function.
                   }
               };
 
             app.displayMenuOnResp();
-            app.smoothNavigationScroll();
+            app.displayContentOnScroll();
         });
 
 })(jQuery, window, document);
